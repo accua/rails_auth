@@ -25,11 +25,12 @@
  <!-- Collect the nav links, forms, and other content for toggling -->
  <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
         <ul class="nav navbar-nav navbar-right">
-          <% if !current_user %>
+          <% if current_user %>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/users/<%= current_user.id %>"> <%= current_user.email %></a></li>
+          <% else %>
             <li><a href="/users/new">Sign-up</a></li>
             <li><a href="/login">Login</a></li>
-          <% else %>
-            <li><a href="/logout">Logout</a></li>
           <% end %>
         </ul>
  <!-- </div> -->

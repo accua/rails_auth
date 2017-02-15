@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
   <div class="panel-default">
     <div class="panel-heading">
-      <%= post.title %>
+      <%= link_to post.title, post_path(post) %>
     </div>
     <div class="panel-body">
       <%= post.content %>

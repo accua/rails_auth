@@ -1,0 +1,14 @@
+<h1 class="text-center"> <%= @user.name %></h1>
+
+<% @user.posts.each do |post| %>
+  <div class="panel-default">
+    <div class="panel-heading">
+      <%= link_to post.title, post_path(post) %>
+    </div>
+    <div class="panel-body">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to "Create New Post", new_user_post_path(@user) %>
