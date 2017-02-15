@@ -1,0 +1,13 @@
+<h1 class="text-center">Welcome to Heap-Flood!</h1>
+
+<h3 class="text-center">Newest Posts:</h3>
+<% @posts.each do |post| %>
+  <div class="panel-default">
+    <div class="panel-heading">
+      <%= post.title %>
+    </div>
+    <div class="panel-body">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
